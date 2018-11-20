@@ -1,0 +1,23 @@
+server:
+  port: 8040
+
+spring:
+  application:
+    name: bsms-config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/ChnZhangkai/BSMS-CONFIG-SERVER.git
+          searchPaths: 
+          username: 
+          password: 
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin123456
+          
