@@ -93,5 +93,6 @@
 		<module>bsms-eureka</module>
 		<module>bsms-config</module>
 		<module>bsms-app</module>
+		<module>bsms-web</module>
 	</modules>
 </project>

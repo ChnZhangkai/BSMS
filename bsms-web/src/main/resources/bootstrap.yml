@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: bsms-web
+  cloud:
+    config:
+      label: master
+      profile: dev
+      uri: http://admin:admin123456@localhost:8040
