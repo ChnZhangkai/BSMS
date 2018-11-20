@@ -13,10 +13,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @EnableTransactionManagement
 @MapperScan("com.bsms.app.mapper")
-public class AppApplication {
+public class BsmsAppApplication {
 	
 	public static void main(String[] args) {
-		SpringApplication.run(AppApplication.class, args);
+		SpringApplication.run(BsmsAppApplication.class, args);
 	}
 	
 }
