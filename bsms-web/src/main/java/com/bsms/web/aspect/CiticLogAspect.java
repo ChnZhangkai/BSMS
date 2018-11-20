@@ -17,7 +17,7 @@ public class CiticLogAspect {
 
 	private static final ObjectMapper MAPPER = new ObjectMapper();
 
-	@Pointcut("within(@com.china.group.annotation.CiticLog *)")
+	@Pointcut("within(@com.bsms.web.annotation.CiticLog *)")
 	public void beanAnnotationWithCiticLog() {
 		throw new UnsupportedOperationException();
 	}
@@ -27,7 +27,7 @@ public class CiticLogAspect {
 		throw new UnsupportedOperationException();
 	}
 
-	@Pointcut("beanAnnotationWithCiticLog() && publicMethod() && !@annotation(com.china.group.annotation.CiticLogExcludeThis)")
+	@Pointcut("beanAnnotationWithCiticLog() && publicMethod() && !@annotation(com.bsms.web.annotation.CiticLogExcludeThis)")
 	public void publicMethodInsideAClassMarkedWithCiticLog() {
 		throw new UnsupportedOperationException();
 	}

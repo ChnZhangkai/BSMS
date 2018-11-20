@@ -10,7 +10,7 @@ spring:
       server:
         git:
           uri: https://github.com/ChnZhangkai/BSMS-CONFIG-SERVER.git
-          searchPaths: 
+          searchPaths: bsms-app,bsms-web
           username: 
           password: 
 
