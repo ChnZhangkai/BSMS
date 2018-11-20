@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+	
+	<Properties>
+		<Property name="project-name">china-group-weather-app</Property>
+		<Property name="pattern">%d{yyyy-MM-dd HH:mm:ss.SSS} [${hostName}] [%X{reqSessionId}] [${project-name}] [%-5level] [%t] %c{1} - %msg%n</Property>
+		<Property name="log-path">/applog/${project-name}</Property>
+	</Properties>
+	
+	<Loggers>
+		<Root level="INFO">
+			<AppenderRef ref="Console"/>
+			<AppenderRef ref="RollingFile"/>
+			<AppenderRef ref="Stderr" level="error"/>
+		</Root>
+	</Loggers>
+	
+	<Appenders>
+		
+		<!-- 控制台日子 -->
+		<Console name="Console" target="SYSTEM_OUT" ignoreExceptions="false">
+			<PatternLayout>
+				<Pattern>${pattern}</Pattern>
+			</PatternLayout>
+		</Console>		
+		
+		<!-- 全部日志 -->
+		<RollingFile name="RollingFile" fileName="${log-path}/logging.log" filePattern="${log-path}/$${date:yyyy-MM}/logging-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout>
+				<Pattern>${pattern}</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy/>
+				<SizeBasedTriggeringPolicy size="25MB"/>
+			</Policies>
+		</RollingFile>
+		
+		<!-- 错误日志 -->
+		<RollingFile name="Stderr" fileName="${log-path}/stderr.log" filePattern="${log-path}/$${date:yyyy-MM}/logging-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout>
+				<Pattern>${pattern}</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy/>
+				<SizeBasedTriggeringPolicy size="25MB"/>
+			</Policies>
+		</RollingFile>
+		
+	</Appenders>
+	
+	
+</configuration>
