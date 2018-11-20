@@ -1,0 +1,14 @@
+server:
+  port: 8050
+  context-path: /bsmsweb
+
+logging:
+  config: classpath:log4j2-dev.xml
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      
+bsmsapp:
+  path: http://bsms-app/bsmsapp
