@@ -26,7 +26,7 @@ public class ParamController {
 	private ParamService paramService;
 	
 	@ApiOperation(value = "根据父编号查询子参数列表")
-	@RequestMapping(value = "/param", method = RequestMethod.GET)
+	@RequestMapping(value = "/param", method = RequestMethod.POST)
 	public HTTPResut<List<TblDicParam>> selectParamByParentCode(@RequestBody TblDicParam param){
 		
 		List<TblDicParam> list = paramService.selectParamsByParentCode(param);

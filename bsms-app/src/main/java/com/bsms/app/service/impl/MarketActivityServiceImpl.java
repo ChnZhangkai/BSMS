@@ -32,7 +32,7 @@ public class MarketActivityServiceImpl implements MarketActivityService{
 		com.bsms.app.model.TblMarketingActivityExample.Criteria activityCriteria = example.createCriteria();
 		
 		if (StringUtils.isNotBlank(activity.getActivityName())) {
-			activityCriteria.andActivityNameEqualTo(activity.getActivityName());
+			activityCriteria.andActivityNameLike("%" + activity.getActivityName() + "%");
 		}
 		
 		if (StringUtils.isNotBlank(activity.getStatus())) {
