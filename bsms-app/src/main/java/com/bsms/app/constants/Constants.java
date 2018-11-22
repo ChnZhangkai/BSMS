@@ -8,20 +8,25 @@ package com.bsms.app.constants;
  * @parma <T>
  */
 public final class Constants {
-	
+
 	/**
 	 * 营销活动审核状态
 	 */
 	public static final String MARKETINGSTATUS = "marketing_check";
-	
+
+	/**
+	 * 未提交审核
+	 */
+	public static final String UNCHECK = "1";
+
 	/**
 	 * 积分类型
 	 */
 	public static final String POINTTYPE = "point_type";
-	
+
 	/**
 	 * 卡券类型
 	 */
 	public static final String CARDTYPE = "card_type";
-	
+
 }

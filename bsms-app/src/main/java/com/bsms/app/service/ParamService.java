@@ -8,5 +8,5 @@ public interface ParamService {
 
 	// 根据父参数编码查询子编码列表
 	List<TblDicParam> selectParamsByParentCode(TblDicParam tblDicParam);
-
+	
 }

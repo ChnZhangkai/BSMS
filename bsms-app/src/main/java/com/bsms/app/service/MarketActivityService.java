@@ -11,4 +11,9 @@ public interface MarketActivityService {
 	// 删除营销活动
 	void deleteMarketingActicitiesById(Long id);
 	
+	// 营销活动新增
+	void addMarketingActivity(TblMarketingActivity activity);
+	
+	void udateMarketingActivity(TblMarketingActivity activity);
+	
 }
